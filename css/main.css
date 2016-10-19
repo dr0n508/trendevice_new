@@ -168,89 +168,7 @@ div, p, a, span, em, strong, img, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd
     .comparison .cta a:hover {
       color: #23527c; }
 
-/*****************table****************************/
-/*!
-// CSS only Responsive Tables
-// http://dbushell.com/2016/03/04/css-only-responsive-tables/
-// by David Bushell
-*/
-.rtable {
-  /*!
-  // IE needs inline-block to position scrolling shadows otherwise use:
-  // display: block;
-  // max-width: min-content;
-  */
-  display: inline-block;
-  vertical-align: top;
-  max-width: 100%;
-  overflow-x: auto;
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-.rtable,
-.rtable--flip tbody {
-  -webkit-overflow-scrolling: touch;
-  background: radial-gradient(left, ellipse, rgba(0, 0, 0, 0.2) 0%, transparent 75%) 0 center, radial-gradient(right, ellipse, rgba(0, 0, 0, 0.2) 0%, transparent 75%) 100% center;
-  background-size: 10px 100%, 10px 100%;
-  background-attachment: scroll, scroll;
-  background-repeat: no-repeat; }
-
-.rtable td:first-child,
-.rtable--flip tbody tr:first-child {
-  background-image: linear-gradient(to right, white 50%, rgba(255, 255, 255, 0) 100%);
-  background-repeat: no-repeat;
-  background-size: 20px 100%; }
-
-.rtable td:last-child,
-.rtable--flip tbody tr:last-child {
-  background-image: linear-gradient(to left, white 50%, rgba(255, 255, 255, 0) 100%);
-  background-repeat: no-repeat;
-  background-position: 100% 0;
-  background-size: 20px 100%; }
-
-.rtable th {
-  font-size: 14px;
-  text-align: left;
-  font-weight: 300;
-  background: #f2f0e6; }
-
-.rtable th,
-.rtable td {
-  padding: 12px 6px;
-  border-right: 1px solid black; }
-
-.rtable--flip {
-  display: flex;
-  overflow: hidden;
-  background: none; }
-
-.rtable--flip thead {
-  display: flex;
-  min-width: min-content; }
-
-.rtable--flip tbody {
-  display: flex;
-  position: relative;
-  overflow-x: auto;
-  overflow-y: hidden; }
-
-.rtable--flip tr {
-  display: flex;
-  flex-direction: column;
-  min-width: 120px; }
-
-.rtable--flip td,
-.rtable--flip th {
-  display: block; }
-
-.rtable--flip td {
-  background-image: none !important;
-  border-left: 0; }
-
-.rtable--flip th:not(:last-child),
-.rtable--flip td:not(:last-child) {
-  border-bottom: 0; }
-
+/*****************tables****************/
 .first-table {
   font-size: 12px; }
   .first-table tr:last-child td {
@@ -274,8 +192,10 @@ div, p, a, span, em, strong, img, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd
   .first-table .text-left {
     text-align: left; }
   .first-table td {
-    min-width: 135px;
-    text-align: center; }
+    padding: 6px;
+    width: 200px;
+    text-align: center;
+    border-right: 1px solid black; }
     .first-table td p {
       font-size: 12px;
       font-weight: 300;
@@ -287,5 +207,92 @@ div, p, a, span, em, strong, img, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd
   padding: 10px;
   font-weight: 300;
   font-size: 18px; }
+
+@media only screen and (max-width: 992px) {
+  /*****************table****************************/
+  /*!
+  // CSS only Responsive Tables
+  // http://dbushell.com/2016/03/04/css-only-responsive-tables/
+  // by David Bushell
+  */
+  .rtable {
+    /*!
+    // IE needs inline-block to position scrolling shadows otherwise use:
+    // display: block;
+    // max-width: min-content;
+    */
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+    border-spacing: 0; }
+
+  .rtable,
+  .rtable--flip tbody {
+    -webkit-overflow-scrolling: touch;
+    background: radial-gradient(left, ellipse, rgba(0, 0, 0, 0.2) 0%, transparent 75%) 0 center, radial-gradient(right, ellipse, rgba(0, 0, 0, 0.2) 0%, transparent 75%) 100% center;
+    background-size: 10px 100%, 10px 100%;
+    background-attachment: scroll, scroll;
+    background-repeat: no-repeat; }
+
+  .rtable td:first-child,
+  .rtable--flip tbody tr:first-child {
+    background-image: linear-gradient(to right, white 50%, rgba(255, 255, 255, 0) 100%);
+    background-repeat: no-repeat;
+    background-size: 20px 100%; }
+
+  .rtable td:last-child,
+  .rtable--flip tbody tr:last-child {
+    background-image: linear-gradient(to left, white 50%, rgba(255, 255, 255, 0) 100%);
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: 20px 100%; }
+
+  .rtable th {
+    font-size: 14px;
+    text-align: left;
+    font-weight: 300;
+    background: #f2f0e6; }
+
+  .rtable th,
+  .rtable td {
+    padding: 12px 6px;
+    border-right: 1px solid black; }
+
+  .rtable--flip {
+    display: flex;
+    overflow: hidden;
+    background: none; }
+
+  .rtable--flip thead {
+    display: flex;
+    min-width: min-content; }
+
+  .rtable--flip tbody {
+    display: flex;
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden; }
+
+  .rtable--flip tr {
+    display: flex;
+    flex-direction: column;
+    min-width: 120px; }
+
+  .rtable--flip td,
+  .rtable--flip th {
+    display: block; }
+
+  .rtable--flip td {
+    background-image: none !important;
+    border-left: 0; }
+
+  .rtable--flip th:not(:last-child),
+  .rtable--flip td:not(:last-child) {
+    border-bottom: 0; }
+
+  .first-table td {
+    min-width: 135px; } }
 
 /*# sourceMappingURL=main.css.map */
