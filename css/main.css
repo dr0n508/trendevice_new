@@ -169,41 +169,51 @@ div, p, a, span, em, strong, img, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd
       color: #23527c; }
 
 /*****************tables****************/
-.first-table {
+.table-compare {
   font-size: 12px; }
-  .first-table tr:last-child td {
+  .table-compare table {
+    margin-top: 50px;
+    margin-bottom: 50px; }
+  .table-compare tr:last-child td {
     font-size: 26px;
     font-weight: 300; }
-  .first-table tr:nth-child(even) td {
+  .table-compare tr:nth-child(even) td {
     background-color: #EEEEEE; }
-  .first-table tr:first-child td {
+  .table-compare tr:first-child td {
     font-weight: 600;
     color: white;
     background-color: #2D2D2D;
     padding: 6px;
-    border-bottom: solid 1px black; }
-    .first-table tr:first-child td:first-child {
+    border-bottom: solid 1px black;
+    font-size: 14px; }
+    .table-compare tr:first-child td:first-child {
       background: none; }
-  .first-table tr td:first-child {
+  .table-compare tr td:first-child {
     font-weight: 300;
     font-size: 15px;
     text-align: left;
     max-width: 100px; }
-  .first-table .text-left {
+  .table-compare .text-left {
     text-align: left; }
-  .first-table td {
+  .table-compare .price td {
+    position: relative; }
+    .table-compare .price td span {
+      font-size: 14px;
+      position: absolute;
+      margin-top: 5px; }
+  .table-compare td {
     padding: 6px;
     width: 200px;
     text-align: center;
     border-right: 1px solid black; }
-    .first-table td p {
+    .table-compare td p {
       font-size: 12px;
       font-weight: 300;
       text-align: left; }
-      .first-table td p span {
+      .table-compare td p span {
         font-weight: 400; }
 
-.ttt p {
+.text-sample p {
   padding: 10px;
   font-weight: 300;
   font-size: 18px; }
@@ -215,6 +225,14 @@ div, p, a, span, em, strong, img, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd
   // http://dbushell.com/2016/03/04/css-only-responsive-tables/
   // by David Bushell
   */
+  .table-compare .container {
+    padding-right: 0;
+    padding-left: 0;
+    width: 100%; }
+  .table-compare table {
+    margin-top: 10px;
+    margin-bottom: 10px; }
+
   .rtable {
     /*!
     // IE needs inline-block to position scrolling shadows otherwise use:
@@ -230,24 +248,7 @@ div, p, a, span, em, strong, img, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd
 
   .rtable,
   .rtable--flip tbody {
-    -webkit-overflow-scrolling: touch;
-    background: radial-gradient(left, ellipse, rgba(0, 0, 0, 0.2) 0%, transparent 75%) 0 center, radial-gradient(right, ellipse, rgba(0, 0, 0, 0.2) 0%, transparent 75%) 100% center;
-    background-size: 10px 100%, 10px 100%;
-    background-attachment: scroll, scroll;
-    background-repeat: no-repeat; }
-
-  .rtable td:first-child,
-  .rtable--flip tbody tr:first-child {
-    background-image: linear-gradient(to right, white 50%, rgba(255, 255, 255, 0) 100%);
-    background-repeat: no-repeat;
-    background-size: 20px 100%; }
-
-  .rtable td:last-child,
-  .rtable--flip tbody tr:last-child {
-    background-image: linear-gradient(to left, white 50%, rgba(255, 255, 255, 0) 100%);
-    background-repeat: no-repeat;
-    background-position: 100% 0;
-    background-size: 20px 100%; }
+    -webkit-overflow-scrolling: touch; }
 
   .rtable th {
     font-size: 14px;
@@ -292,7 +293,7 @@ div, p, a, span, em, strong, img, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd
   .rtable--flip td:not(:last-child) {
     border-bottom: 0; }
 
-  .first-table td {
+  .table-compare td {
     min-width: 135px; } }
 
 /*# sourceMappingURL=main.css.map */

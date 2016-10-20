@@ -228,7 +228,11 @@ $white-color: #FFFFFF;
 
 
 
-.first-table {
+.table-compare {
+  table {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
   font-size: 12px;
   tr:last-child td {
     font-size: 26px;
@@ -247,6 +251,7 @@ $white-color: #FFFFFF;
     background-color: #2D2D2D;
     padding: 6px;
     border-bottom: solid 1px black;
+    font-size: 14px;
   }
   tr td:first-child {
     font-weight: 300;
@@ -256,6 +261,16 @@ $white-color: #FFFFFF;
   }
   .text-left {
     text-align: left;
+  }
+  .price {
+    td {
+      position: relative;
+      span {
+        font-size: 14px;
+        position: absolute;
+        margin-top: 5px;
+      }
+    }
   }
   td {
     padding: 6px;
@@ -274,7 +289,7 @@ $white-color: #FFFFFF;
   }
 }
 
-.ttt {
+.text-sample {
   p {
     padding: 10px;
     font-weight: 300;
@@ -292,6 +307,17 @@ $white-color: #FFFFFF;
   // by David Bushell
   */
 
+  .table-compare {
+    .container {
+      padding-right: 0;
+      padding-left: 0;
+      width: 100%;
+    }
+    table {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
   .rtable {
     /*!
     // IE needs inline-block to position scrolling shadows otherwise use:
@@ -317,29 +343,29 @@ $white-color: #FFFFFF;
     -webkit-overflow-scrolling: touch;
 
     // scrolling shadows
-    background: radial-gradient(left, ellipse, rgba(0,0,0, .2) 0%, rgba(0,0,0, 0) 75%) 0 center,
-    radial-gradient(right, ellipse, rgba(0,0,0, .2) 0%, rgba(0,0,0, 0) 75%) 100% center;
-    background-size: 10px 100%, 10px 100%;
-    background-attachment: scroll, scroll;
-    background-repeat: no-repeat;
+//    background: radial-gradient(left, ellipse, rgba(0,0,0, .2) 0%, rgba(0,0,0, 0) 75%) 0 center,
+//    radial-gradient(right, ellipse, rgba(0,0,0, .2) 0%, rgba(0,0,0, 0) 75%) 100% center;
+//    background-size: 10px 100%, 10px 100%;
+//    background-attachment: scroll, scroll;
+//    background-repeat: no-repeat;
   }
 
   // change these gradients from white to your background colour if it differs
   // gradient on the first cells to hide the left shadow
   .rtable td:first-child,
   .rtable--flip tbody tr:first-child {
-    background-image: linear-gradient(to right, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
-    background-repeat: no-repeat;
-    background-size: 20px 100%;
+//    background-image: linear-gradient(to right, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+//    background-repeat: no-repeat;
+//    background-size: 20px 100%;
   }
 
   // gradient on the last cells to hide the right shadow
   .rtable td:last-child,
   .rtable--flip tbody tr:last-child {
-    background-image: linear-gradient(to left, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
-    background-repeat: no-repeat;
-    background-position: 100% 0;
-    background-size: 20px 100%;
+//    background-image: linear-gradient(to left, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+//    background-repeat: no-repeat;
+//    background-position: 100% 0;
+//    background-size: 20px 100%;
   }
 
   .rtable th {
@@ -399,7 +425,7 @@ $white-color: #FFFFFF;
     border-bottom: 0;
   }
 
-  .first-table {
+  .table-compare {
     td {
       min-width: 135px;
     }
