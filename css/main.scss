@@ -430,5 +430,86 @@ $white-color: #FFFFFF;
       min-width: 135px;
     }
   }
+}
 
+@media only screen and (max-width: 768px) {
+  .big-yellow-btn {
+    font-size: 18px;
+    padding: 10px;
+  }
+  .comparison {
+    h1 {
+      font-size: 28px;
+      padding: 20px 0;
+    }
+    h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .text-section {
+      padding: 10px;
+      p {
+        font-size: 16px;
+      }
+    }
+    .cta {
+      font-size: 28px;
+    }
+    .table-comparison {
+      margin-top: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .comparison .table-comparison {
+    font-size: 14px;
+  }
+  .comparison .cell-table {
+    padding: 0 5px;
+    p {
+      font-size: 12px;
+    }
+  }
+  .big-yellow-btn {
+    font-size: 16px;
+    padding: 10px 5px;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .comparison {
+    .col-xs-4 {
+      width: 50%;
+      margin-left: 0;
+    }
+    h1 {
+      font-size: 24px;
+    }
+    h3 {
+      font-size: 18px;
+    }
+    .cta {
+      font-size: 24px;
+    }
+    .table-comparison {
+      font-size: 12px;
+    }
+    .text-section {
+      p {
+        font-size: 14px;
+      }
+    }
+    .cell-table {
+      p {
+        font-size: 9px;
+      }
+      .price {
+        font-size: 28px;
+      }
+    }
+    .big-yellow-btn {
+      display: inherit;
+    }
+  }
 }
